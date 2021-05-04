@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vendors_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/back_from_vendorlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/view2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="@dimen/ot_margin_medium"
+        android:layout_marginLeft="@dimen/ot_margin_medium"
+        android:src="@drawable/ot_back_arrow" />
+
+    <TextView
+        android:id="@+id/VL_page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/ot_vl_title_padding"
+        android:textSize="@dimen/ot_subtitle_text_size"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ot_divider_height_secondary"
+        android:layout_below="@+id/VL_page_title"
+        android:background="@color/trans_light_greyOT" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_vendor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_marginStart="@dimen/ot_margin_very_small"
+        android:layout_marginLeft="@dimen/ot_margin_very_small"
+        android:layout_alignTop="@+id/filter_vendors"
+        android:layout_alignBottom="@+id/filter_vendors"
+        android:layout_marginEnd="@dimen/ot_search_margin"
+        android:layout_marginRight="@dimen/ot_search_margin"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="@string/ot_hint_search_vendor" />
+
+    <ImageView
+        android:id="@+id/filter_vendors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/ot_filter_icon_margin"
+        android:layout_marginEnd="@dimen/ot_margin_small"
+        android:layout_marginRight="@dimen/ot_margin_small"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/vendor_allow_all_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_vendor"
+        android:gravity="start"
+        android:padding="@dimen/ot_vl_toggle_title_padding_large"
+        android:textSize="@dimen/ot_subtitle_text_size"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/allow_all_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/leg_int_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/ot_vl_li_text_margin"
+        android:layout_marginRight="@dimen/ot_vl_li_text_margin"
+        android:paddingTop="@dimen/ot_vl_toggle_padding_large"
+        android:textSize="@dimen/ot_vl_toggle_text_size"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/all_leg_int_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view3"
+        android:layout_below="@+id/leg_int_text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/ot_vl_li_margin"
+        android:layout_marginRight="@dimen/ot_vl_li_margin"
+        android:paddingTop="@dimen/ot_vl_toggle_padding_small"
+        android:paddingBottom="@dimen/ot_vl_toggle_padding_large"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/consent_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/ot_vl_toggle_margin"
+        android:layout_marginRight="@dimen/ot_vl_toggle_margin"
+        android:paddingTop="@dimen/ot_vl_toggle_padding_large"
+        android:textSize="@dimen/ot_vl_toggle_text_size"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/all_consent_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view3"
+        android:layout_alignTop="@+id/vendor_allow_all_title"
+        android:layout_alignBottom="@+id/vendor_allow_all_title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/ot_vl_toggle_margin"
+        android:layout_marginRight="@dimen/ot_vl_toggle_margin"
+        android:paddingTop="@dimen/ot_vl_toggle_padding_small"
+        android:paddingBottom="@dimen/ot_vl_toggle_padding_large" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ot_divider_height_secondary"
+        android:layout_below="@+id/vendor_allow_all_title"
+        android:background="@color/trans_light_greyOT" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_vendors_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        android:scrollbarSize="@dimen/ot_scrollbar_size"
+        android:layout_above="@+id/footer_layout"
+        android:layout_below="@id/view3" />
+
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/whiteOT"
+        android:elevation="@dimen/ot_layout_elevation"
+        android:padding="@dimen/ot_layout_padding"
+        >
+
+        <Button
+            android:id="@+id/vendors_confirm_choices_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ot_sdk_button_padding"
+            android:gravity="center"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textSize="@dimen/ot_button_text_size" />
+    </RelativeLayout>
+</RelativeLayout>

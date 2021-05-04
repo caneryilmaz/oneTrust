@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/banner_tv_layout"
+    tools:ignore="MissingDefaultResource">
+
+            <TextView
+                android:id="@+id/banner_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:paddingStart="@dimen/ot_tv_title_padding"
+                android:paddingEnd="@dimen/ot_tv_title_padding"
+                android:layout_marginTop="@dimen/ot_tv_text_margin_small"
+                android:textColor="@color/ot_default_text_color"
+                android:textSize="@dimen/ot_tv_title_text_size_large"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="@dimen/ot_tv_title_padding"
+                android:layout_below="@+id/banner_title_tv"
+                android:nextFocusDown="@id/btn_accept_TV"
+                android:id="@+id/tv_banner_desc_scrollview"
+                android:scrollbarThumbVertical="@drawable/ot_tv_scrollbar"
+                android:scrollbarTrackVertical="@color/darkGreyOT"
+                android:scrollbarSize="@dimen/ot_tv_scrollbar_size"
+                android:fillViewport="true">
+
+                <TextView
+                    android:id="@+id/banner_desc_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:minLines="4"
+                    android:gravity="center_horizontal"
+                    android:focusableInTouchMode="true"
+                    android:nextFocusDown="@id/btn_accept_TV"
+                    android:lineSpacingExtra="@dimen/ot_tv_text_line_spacing"
+                    android:paddingStart="@dimen/ot_tv_text_padding_large"
+                    android:paddingEnd="@dimen/ot_tv_text_padding_large"
+                    android:textSize="@dimen/ot_description_text_size" />
+            </ScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/ot_tv_layout_margin_small"
+                android:gravity="center_vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/tv_banner_desc_scrollview"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/btn_accept_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ot_tv_margin_primary"
+                    android:layout_marginEnd="@dimen/ot_tv_margin_primary"
+                    android:focusable="true"
+                    android:padding="@dimen/ot_tv_button_padding"
+                    android:nextFocusUp="@id/banner_desc_tv"
+                    android:focusableInTouchMode="true"
+                    android:touchscreenBlocksFocus="true"
+                    android:stateListAnimator="@animator/ot_focus_in"
+                    android:textColor="@color/whiteOT"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn_reject_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ot_tv_margin_primary"
+                    android:layout_marginEnd="@dimen/ot_tv_margin_primary"
+                    android:focusable="true"
+                    android:padding="@dimen/ot_tv_button_padding"
+                    android:layout_below="@id/btn_accept_TV"
+                    android:touchscreenBlocksFocus="true"
+                    android:stateListAnimator="@animator/ot_focus_in"
+                    android:textColor="@color/whiteOT"
+                    android:focusableInTouchMode="true"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn_mp_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ot_tv_margin_primary"
+                    android:layout_marginEnd="@dimen/ot_tv_margin_primary"
+                    android:focusable="true"
+                    android:padding="@dimen/ot_tv_button_padding"
+                    android:layout_below="@id/btn_reject_TV"
+                    android:touchscreenBlocksFocus="true"
+                    android:stateListAnimator="@animator/ot_focus_in"
+                    android:textColor="@color/whiteOT"
+                    android:focusableInTouchMode="true"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+        </RelativeLayout>

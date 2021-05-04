@@ -1,0 +1,3 @@
+include ':OTPublishersHeadlessSDK-release'
+include ':app'
+rootProject.name = "TestOneTrust"

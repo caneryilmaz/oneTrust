@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="bgLightOT">#FFF3F1F1</color>
+    <color name="bgTransparentOT">#2D6B6767</color>
+    <color name="blueOT">#55ACEE</color>
+    <color name="colorAccentOTUI">#3D4644</color>
+    <color name="colorPrimaryDarkOT">#3c881d</color>
+    <color name="colorPrimaryOT">#67B54B </color>
+    <color name="contentTextColorOT">#788381</color>
+    <color name="darkGreyOT">#921F1F1F</color>
+    <color name="greenOT">#6CC04A</color>
+    <color name="groupItemBGOT">#4A535B</color>
+    <color name="groupItemSelectedBGOT">#1971DE</color>
+    <color name="groupTextOT">#7E7E7E</color>
+    <color name="layoutBgDarkOT">#11151A</color>
+    <color name="layoutBgLightOT">#242424</color>
+    <color name="light_greyOT">#d1d1d1</color>
+    <color name="ot_default_text_color">#FFFFFF</color>
+    <color name="redOT">#e83333</color>
+    <color name="trans_light_greyOT">#92515050</color>
+    <color name="tvGreyOT">#363636</color>
+    <color name="whiteOT">#FFFFFF</color>
+    <string name="ot_save_choices" ns1:ignore="ExtraTranslation">Confirm My Choice</string>
+    <string name="ot_string_tv_back" ns1:ignore="ExtraTranslation">Back</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/vd_purpose_item"
+    android:drawableLeft="@drawable/ot_list_bullet"
+    android:layout_marginLeft="@dimen/ot_vd_purpose_item_margin"
+    android:padding="@dimen/ot_vd_purpose_item_padding"
+    android:textSize="@dimen/ot_description_text_size"
+    android:drawablePadding="@dimen/ot_vd_bullet_padding"
+    android:drawableStart="@drawable/ot_list_bullet"
+    android:layout_marginStart="@dimen/ot_vd_purpose_item_margin" />
+</LinearLayout>

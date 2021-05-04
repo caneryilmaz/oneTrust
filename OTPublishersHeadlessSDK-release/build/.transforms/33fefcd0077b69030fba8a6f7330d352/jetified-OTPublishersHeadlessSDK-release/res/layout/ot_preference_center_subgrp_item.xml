@@ -1,0 +1,61 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ot_pc_detail_padding_large"
+    android:paddingEnd="@dimen/ot_pc_detail_padding_medium"
+    android:paddingRight="@dimen/ot_pc_detail_padding_medium"
+    android:paddingLeft="@dimen/ot_pc_detail_padding_large">
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ot_margin_small"
+        android:maxLines="3"
+        android:paddingEnd="@dimen/ot_vl_vendor_name_padding"
+        android:textSize="@dimen/ot_description_text_size"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sub_group_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ot_margin_small"
+        android:textSize="@dimen/ot_description_text_size"
+        app:layout_constraintTop_toBottomOf="@+id/group_name" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sub_legit_int_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/group_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/ot_pc_subgrp_li_margin"
+        android:layout_marginRight="@dimen/ot_pc_subgrp_li_margin"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/group_name" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sub_consent_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/group_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/group_name" />
+
+    <TextView
+        android:id="@+id/alwaysActiveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/ot_description_text_size"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/group_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/group_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
